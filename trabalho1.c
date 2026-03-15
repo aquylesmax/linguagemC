@@ -11,5 +11,5 @@ int main() {
     scanf("%i", &numero);
 
     resultado = numero * 3;
-    printf("%i\n", resultado);
+    printf("O resultado e': %i\n", resultado);
 }

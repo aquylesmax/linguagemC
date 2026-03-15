@@ -10,8 +10,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                // Esta variável abaixo coloca .exe no Windows e nada no Linux
-                "${fileDirname}/${fileBasenameNoExtension}${defaultExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -23,7 +22,16 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Tarefa de compilação usando GCC"
+            "detail": "Tarefa de compilação usando GCC",
+            "windows": {
+                "args": [
+                    "-fdiagnostics-color=always",
+                    "-g",
+                    "${file}",
+                    "-o",
+                    "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                ]
+            }
         }
     ]
 }
