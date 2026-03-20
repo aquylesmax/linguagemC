@@ -1,15 +1,14 @@
 #include<math.h>
 #include<stdio.h>
 
-int main() {
-    // Linha para o printf já sair automaticamente após a execução da linha (já liberar o buffer)
-    setvbuf(stdout, NULL, _IONBF, 0);
-
+main() {
+   
     int numero, resultado;
 
     printf("digite um numero: ");
-    scanf("%i", &numero);
+    scanf("%i",&numero);
 
-    resultado = numero * 3;
-    printf("O resultado e': %i\n", resultado);
+    resultado = numero *5;
+    printf( "%i", resultado);
+    return 0;
 }
